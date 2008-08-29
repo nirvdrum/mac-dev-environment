@@ -1,0 +1,12 @@
+Overview
+========
+
+This project probably isn't generally useful, but maybe I'm wrong.  Sometimes that happens.
+
+Anyway, the purpose is to set up and maintain my Ruby development environment.  E.g., setting up TextMate bundles can be something of a pain in the neck, so I use update-textmate-bundles.sh to take care of that for me.  I set it up as a cronjob and then don't have to worry about whether I have the latest version of a given bundle.
+
+
+Tools
+=====
+
+* update-textmate-bundles.sh -- Updates a pre-defined list of TextMate bundles and installs them if they don't exist.
