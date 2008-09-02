@@ -37,7 +37,7 @@ function download
   esac
 }
 
-for bundle_name in Git GitHub jQuery RubyAMP RubyOnRails Ruby RSpec
+for bundle_name in Git GitHub jQuery RubyAMP RubyOnRails RSpec
 do
   bundle="$BUNDLE_DIR/$bundle_name.tmbundle"
 
