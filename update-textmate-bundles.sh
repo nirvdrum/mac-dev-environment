@@ -7,6 +7,10 @@ function download
   cd "$BUNDLE_DIR"
   
   case $1 in
+    Ack)
+      git clone git://github.com/protocool/ack-tmbundle.git Ack.tmbundle
+      ;;
+  
     Git)
       git clone git://gitorious.org/git-tmbundle/mainline.git Git.tmbundle
       ;;
@@ -23,6 +27,10 @@ function download
       git clone git://github.com/timcharper/rubyamp.git RubyAMP.tmbundle
       ;;
       
+    iPhone)
+      git clone git://github.com/drnic/objective-c-iphone-tmbundle.git iPhone.tmbundle
+      ;;
+      
     jQuery)
       git clone git://github.com/drnic/javascript-jquery-tmbundle.git jQuery.tmbundle
       ;;
@@ -34,10 +42,14 @@ function download
     Ruby)
       git clone git://github.com/drnic/ruby-tmbundle.git Ruby.tmbundle
       ;;
+      
+    Shoulda)
+      git clone git://github.com/drnic/ruby-shoulda-tmbundle.git Shoulda.tmbundle
+      ;;
   esac
 }
 
-for bundle_name in Git GitHub jQuery RubyAMP RubyOnRails RSpec
+for bundle_name in Ack Git GitHub iPhone jQuery RubyAMP RubyOnRails RSpec Shoulda
 do
   bundle="$BUNDLE_DIR/$bundle_name.tmbundle"
 
