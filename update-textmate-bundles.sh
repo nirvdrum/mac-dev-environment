@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BUNDLE_DIR="$HOME/Library/Application Support/TextMate/Bundles"
+GIT=`/usr/bin/env git`
 
 function download
 {
@@ -49,6 +50,11 @@ function download
   esac
 }
 
+if [ ! -d "$BUNDLE_DIR" ]
+then
+    mkdir -p "$BUNDLE_DIR"
+fi
+
 for bundle_name in Ack Git GitHub iPhone jQuery RubyAMP RubyOnRails RSpec Shoulda
 do
   bundle="$BUNDLE_DIR/$bundle_name.tmbundle"
@@ -56,7 +62,7 @@ do
   if [ -d "$bundle" ]
   then
     cd "$bundle"
-    /usr/local/git/bin/git pull
+    $GIT pull
   else
     download $bundle_name
   fi
