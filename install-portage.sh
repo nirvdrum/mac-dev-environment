@@ -71,7 +71,7 @@ emerge --sync
 emerge -u system
 
 echo 'USE="unicode nls"' >> $EPREFIX/etc/make.conf
-echo 'CFLAGS="-O2 -pipe <my-cpu-flags>"' >> $EPREFIX/etc/make.conf
+echo 'CFLAGS="-O2 -pipe -march=nocona"' >> $EPREFIX/etc/make.conf
 echo 'CXXFLAGS="${CFLAGS}"' >> $EPREFIX/etc/make.conf
 
 echo "Rebuilding system with locally installed tools"
