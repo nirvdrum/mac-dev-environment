@@ -70,9 +70,10 @@ echo "Building packages to complete system install"
 emerge --sync
 emerge -u system
 
-echo 'USE="unicode nls"' >> $EPREFIX/etc/make.conf
+echo 'USE="unicode nls bash-completion vim-syntax perl ruby png jpeg truetype ssl subversion"' >> $EPREFIX/etc/make.conf
 echo 'CFLAGS="-O2 -pipe -march=nocona"' >> $EPREFIX/etc/make.conf
 echo 'CXXFLAGS="${CFLAGS}"' >> $EPREFIX/etc/make.conf
+echo 'MAKEOPTS="-j3"' >> $EPREFIX/etc/make.conf
 
 echo "Rebuilding system with locally installed tools"
 emerge -e system
